@@ -1,12 +1,21 @@
 {
-    "manifest_version" : 2,
-    "name" : "Coronavirus Immunity",
-    "version" : "0.1.0",
-    "content_scripts" : [
-        {
-            "matches" : ["<all_urls>"], 
-            "js" : ["script.js"], 
-            "css" : ["style.css"]
-        }
-    ]
+    "manifest_version": 2,
+
+    "name": "Raunak's Favourite Song",
+    "description": "Autoplay's Raunak's favourite song on Youtube",
+    "version": "1.0.0",
+
+    "chrome_url_overrides": {
+        "newtab": "index.html"
+    },
+
+    
+
+    "permissions":[
+        "tabs"
+    ],
+    "background": {
+        "scripts": ["main.js"],
+        "persistent": true
+    }
 }
